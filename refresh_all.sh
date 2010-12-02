@@ -45,7 +45,7 @@ run_clean_tasks ()
 
 run_git_tasks ()
 {  
-    git status
+    git status 2> /dev/null
 
     if [ $? != "0" ]; then
 	echo `pwd` "is not associated with a git repository, skipping."
