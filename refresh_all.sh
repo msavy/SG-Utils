@@ -1,9 +1,9 @@
 #!/bin/bash
 # Primitive script to;
-# - Identify and run any "clean" rake tasks in specified directories
-# - Git pull, force checkout and submodule init/update on master
+# - Identify and run any "clean" rake tasks in specified directories (if present)
+# - Git pull, checkout and submodule init/update on master (optionally force, clean and/or reset)
 #   but only if the directory is a git repo
-# - Force option available which will discard local changes in favour of repo versions
+# - Force & clean options available which will discard local changes in favour of repo versions
 # Marc Savy
 
 #use -d "/my/dir /my/dir2" to override defaults
