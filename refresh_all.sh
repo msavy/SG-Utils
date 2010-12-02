@@ -20,15 +20,15 @@ PROJECTS=( /mnt/boxgrinder/boxgrinder-build
 /mnt/boxgrinder/torquebox-rpm )
 
 USAGE="Usage: `basename $0` [-hvl][-d \"dir1 dir2 dir3\"][-frc] \n
--d \t list of directories to override defaults \n
--f \t force checkout, this will discard any local changes in favour of repository committed version (careful!) \n
--c \t clean out any untracked files \n
--r \t hard reset, discards all local repository changes and resets to origin/master \n
--h \t this information \n
--v \t version \n
--l \t list default directories 
-"
-VERSION=0.1
+-d \t List of directories to override defaults \n
+-f \t Force checkout, this will discard any local changes in favour of repository committed version (careful!) \n
+-c \t Clean out any untracked files (careful!) \n
+-r \t Hard reset, discards _all_ local repository differences and resets to origin/master (careful!)\n
+-h \t This help information \n
+-v \t Version \n
+-l \t List default directories"
+
+VERSION=0.1.1
 FORCE_CHECKOUT=0
 BRANCH=master
 HARD_RESET=0
@@ -53,7 +53,7 @@ run_git_tasks ()
     fi
 
     if [ $HARD_RESET == 1 ]; then
-	git reset --hard origin/master    
+	git reset --hard origin/$BRANCH    
     fi
 
     if [ $CLEAN_UNTRACKED == 1 ]; then
@@ -61,9 +61,9 @@ run_git_tasks ()
     fi
 
     if [ $FORCE_CHECKOUT == 1 ]; then
-	git checkout -f master
+	git checkout -f $BRANCH
     else
-	git checkout master
+	git checkout $BRANCH
     fi
 
     git pull
