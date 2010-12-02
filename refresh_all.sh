@@ -22,8 +22,8 @@ PROJECTS=( /mnt/boxgrinder/boxgrinder-build
 USAGE="Usage: `basename $0` [-hvl][-d \"dir1 dir2 dir3\"][-frc] \n
 -d \t list of directories to override defaults \n
 -f \t force checkout, this will discard any local changes in favour of repository committed version (careful!) \n
--c \t clean out any untracked files
--r \t hard reset, discards all local repository changes and resets to origin/master
+-c \t clean out any untracked files \n
+-r \t hard reset, discards all local repository changes and resets to origin/master \n
 -h \t this information \n
 -v \t version \n
 -l \t list default directories 
