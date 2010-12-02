@@ -8,7 +8,16 @@
 
 #use -d "/my/dir /my/dir2" to override defaults
 #you can use relative paths from wherever the script is executed if you prefer
-PROJECTS=( /mnt/boxgrinder/boxgrinder-build /mnt/boxgrinder/boxgrinder-build-plugins  /mnt/boxgrinder/boxgrinder-core  /mnt/boxgrinder/rumpler  /mnt/boxgrinder/steamcannon  /mnt/boxgrinder/steamcannon-agent  /mnt/boxgrinder/steamcannon-agent-rpm  /mnt/boxgrinder/steamcannon-appliances  /mnt/boxgrinder/steamcannon-rpm  /mnt/boxgrinder/torquebox-rpm )
+PROJECTS=( /mnt/boxgrinder/boxgrinder-build 
+/mnt/boxgrinder/boxgrinder-build-plugins  
+/mnt/boxgrinder/boxgrinder-core  
+/mnt/boxgrinder/rumpler  
+/mnt/boxgrinder/steamcannon  
+/mnt/boxgrinder/steamcannon-agent  
+/mnt/boxgrinder/steamcannon-agent-rpm  
+/mnt/boxgrinder/steamcannon-appliances  
+/mnt/boxgrinder/steamcannon-rpm  
+/mnt/boxgrinder/torquebox-rpm )
 
 USAGE="Usage: `basename $0` [-hvl][-d \"dir1 dir2 dir3\"][-frc] \n
 -d \t list of directories to override defaults \n
