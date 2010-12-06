@@ -23,7 +23,7 @@ USAGE="Usage: `basename $0` [-hvl][-d \"dir1 dir2 dir3\"][-frc] \n
 -d \t List of directories to override defaults \n
 -f \t Force checkout, this will discard any local changes in favour of repository committed version (careful!) \n
 -c \t Clean out any untracked files (careful!) \n
--r \t Hard reset, discards _all_ local repository differences and resets to origin/master (careful!)\n
+-r \t Hard reset, discards _all_ local repository differences and resets to origin/master (careful!) \n
 -h \t This help information \n
 -v \t Version \n
 -l \t List default directories"
