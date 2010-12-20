@@ -57,7 +57,8 @@ run_git_tasks ()
     fi
 
     if [ $CLEAN_UNTRACKED == 1 ]; then
-	git clean -d -f
+	echo "Cleaning Untracked Files"
+	git clean -d -f -x
     fi
 
     if [ $FORCE_CHECKOUT == 1 ]; then
